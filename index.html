@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Area Calculator</title>
+    <style>
+        body{
+            background-color: #DDEB9D ;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+         
+        }
+        .box{
+            height: 300px;
+           width: 300px;
+            margin: 100px 150px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px 30px;
+            justify-content: center;
+            text-align: center;
+            background-color: #143D60;
+        
+          
+          
+        }
+        .height{
+            border: 1px solid black;
+            width: 260px;
+            height: 30px;
+            margin: 10px 20px;
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+      .width{
+            border: 1px solid black;
+            width: 260px;
+            height: 30px;
+            margin: 10px 20px;
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+        .btngroup{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-wrap: wrap;
+        }
+      .reset{
+        height: 30px;
+        width: 120px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 20px 10px;
+        background-color: #27667B;
+      }
+      .sum{
+        height: 30px;
+        width: 120px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 20px 10px;
+        
+        background-color: #A0C878;
+
+
+      }
+      .result{
+        margin-left: 20px;
+      }
+     
+      .sum:hover{
+        box-shadow:2px 2px 2px 3px black ;
+      }
+      .reset:hover{
+        box-shadow:2px 2px 2px 3px black ;
+      }
+    </style>
+<body>
+
+  <center>  <h1> GAURAV FIRST AREA CALCULATOR OF RECTANGLE</h1></center>
+   <div class="container">
+    <div class="box">
+        <h1> Area Calculator</h1>
+        <input type="text" class="height" id="num1" placeholder="Enter the height">
+        <input type="text" class="width" id="num2" placeholder="Enter the width">
+       
+<p class="result" id="res">Area of Rectangle :</p>
+        <div class="btngroup">
+            <button class="reset" id="btn2" onclick="reset()">Reset</button>
+            <button class="sum" id="btn1" onclick="area()">Sum</button>
+           
+            
+        </div>
+    </div>
+   </div>
+
+
+   <script>
+    console.log("hello")
+    function area(){
+        const no1 =document.getElementById("num1");
+        const no2 =document.getElementById("num2");
+        const output =document.getElementById("res");  
+
+    const number1element=no1.value;
+    const number2element=no2.value;
+
+    if(number1element==""){
+        alert("enter no.1")
+       
+    }
+
+
+    if(number2element==""){
+            alert("enter no.2")
+        }
+
+
+        const result = parseInt(number1element) * parseInt(number1element) ;
+        
+        output.innerText=`The Area of Rectangle :${result}`;
+   
+    }
+    function reset(){
+        const number1 =document.getElementById("num1")
+        const number2=document.getElementById("num2")
+        const outPut =document.getElementById("res")
+
+        
+        number1.value= ""
+        number2.value= ""
+        outPut.innerText="_";
+    }
+   </script>
+</body>
+</html>
