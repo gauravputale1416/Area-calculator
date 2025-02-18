@@ -8,6 +8,7 @@
         body{
             background-color: #DDEB9D ;
             margin: 0%;
+         margin-top: 0%;
         }
         .container{
             display: flex;
@@ -85,6 +86,7 @@
         background-color: #27667B;
         border-radius: 5px;
         border: 1px soliid black;
+        width: 80px;
       }
       .button:hover{
         background-color: #143D60;
@@ -102,65 +104,56 @@
       }
     </style>
 <body>
- 
-  <div class="div">
-    <center><h1 class="
-      text">
-        AREA ARINA ...
-      </h1></center>
-  </div>
-  <a  href="circlearea.html"><button class="button">CIRCLE AREA</button></a>
+    <div class="div">
+        <center><h1 class="
+          text">
+            AREA ARINA ...
+          </h1></center>
+      </div>
+    <a href="index.html"><button class="button">Back</button></a>
 
-  <center>  <h1> GAURAV FIRST AREA CALCULATOR OF RECTANGLE</h1></center>
+  <center>  <h1> GAURAV FIRST AREA CALCULATOR OF CIRCLE</h1></center>
    <div class="container">
     <div class="box">
         <h1> Area Calculator</h1>
-        <input type="text" class="height" id="num1" placeholder="Enter the height">
-        <input type="text" class="width" id="num2" placeholder="Enter the width">
+        <input type="text" class="height" id="num1" placeholder="Enter the radius">
+      
        
-<p class="result" id="res">Area of Rectangle :</p>
+<p class="result" id="res">Area of Circle :</p>
         <div class="btngroup">
             <button class="reset" id="btn2" onclick="reset()">Reset</button>
             <button class="sum" id="btn1" onclick="area()">Sum</button>
-           
-            
         </div>
     </div>
    </div>
 
 
    <script>
-    console.log("hello")
     function area(){
-        const no1 =document.getElementById("num1");
-        const no2 =document.getElementById("num2");
-        const output =document.getElementById("res");  
+        const radius=document.getElementById("num1")
+        const radii =parseInt(radius.value);
+        const resullt=document.getElementById("res")
 
-    const number1element=no1.value;
-    const number2element=no2.value;
-
-    if(number1element==""){
-        alert("enter no.1")
-       
-    }
-    if(number2element==""){
-            alert("enter no.2")
+                if(radius==""){
+            alert("enter the radius")
         }
- const result = parseInt(number1element) * parseInt(number1element) ;
-        
-        output.innerText=`The Area of Rectangle :${result}`;
+       
+
+       const output = radii*radii*3.14;
+
+    resullt.innerText =`the area of circle : ${output}`;
+
    
     }
     function reset(){
-        const number1 =document.getElementById("num1")
-        const number2=document.getElementById("num2")
-        const outPut =document.getElementById("res")
-
+        const radius = document.getElementById("num1")
         
-        number1.value= ""
-        number2.value= ""
-        outPut.innerText="_";
-    }
+        const resullt=document.getElementById("res")
+
+        radius.value= ""
+         resullt.innerText="-";
+       }
+   
    </script>
 </body>
 </html>
